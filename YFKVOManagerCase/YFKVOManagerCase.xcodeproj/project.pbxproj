@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EF4DCA61E9B757500E846E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4DCA51E9B757500E846E6 /* AppDelegate.swift */; };
+		5EF4DCA81E9B757500E846E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4DCA71E9B757500E846E6 /* ViewController.swift */; };
+		5EF4DCAB1E9B757500E846E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4DCA91E9B757500E846E6 /* Main.storyboard */; };
+		5EF4DCAD1E9B757500E846E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4DCAC1E9B757500E846E6 /* Assets.xcassets */; };
+		5EF4DCB01E9B757500E846E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4DCAE1E9B757500E846E6 /* LaunchScreen.storyboard */; };
+		5EF4DCBB1E9B757500E846E6 /* YFKVOManagerCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4DCBA1E9B757500E846E6 /* YFKVOManagerCaseTests.swift */; };
+		5EF4DCC61E9B757500E846E6 /* YFKVOManagerCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4DCC51E9B757500E846E6 /* YFKVOManagerCaseUITests.swift */; };
+		5EF4DCD71E9B8CFD00E846E6 /* YFKVOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4DCD61E9B8CFD00E846E6 /* YFKVOManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EF4DCB71E9B757500E846E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EF4DC9A1E9B757500E846E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EF4DCA11E9B757500E846E6;
+			remoteInfo = YFKVOManagerCase;
+		};
+		5EF4DCC21E9B757500E846E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EF4DC9A1E9B757500E846E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EF4DCA11E9B757500E846E6;
+			remoteInfo = YFKVOManagerCase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5EF4DCA21E9B757500E846E6 /* YFKVOManagerCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFKVOManagerCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF4DCA51E9B757500E846E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EF4DCA71E9B757500E846E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EF4DCAA1E9B757500E846E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EF4DCAC1E9B757500E846E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EF4DCAF1E9B757500E846E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EF4DCB11E9B757500E846E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF4DCB61E9B757500E846E6 /* YFKVOManagerCaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YFKVOManagerCaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF4DCBA1E9B757500E846E6 /* YFKVOManagerCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFKVOManagerCaseTests.swift; sourceTree = "<group>"; };
+		5EF4DCBC1E9B757500E846E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF4DCC11E9B757500E846E6 /* YFKVOManagerCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YFKVOManagerCaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF4DCC51E9B757500E846E6 /* YFKVOManagerCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFKVOManagerCaseUITests.swift; sourceTree = "<group>"; };
+		5EF4DCC71E9B757500E846E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF4DCD61E9B8CFD00E846E6 /* YFKVOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFKVOManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EF4DC9F1E9B757500E846E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF4DCB31E9B757500E846E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF4DCBE1E9B757500E846E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EF4DC991E9B757500E846E6 = {
+			isa = PBXGroup;
+			children = (
+				5EF4DCA41E9B757500E846E6 /* YFKVOManagerCase */,
+				5EF4DCB91E9B757500E846E6 /* YFKVOManagerCaseTests */,
+				5EF4DCC41E9B757500E846E6 /* YFKVOManagerCaseUITests */,
+				5EF4DCA31E9B757500E846E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EF4DCA31E9B757500E846E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EF4DCA21E9B757500E846E6 /* YFKVOManagerCase.app */,
+				5EF4DCB61E9B757500E846E6 /* YFKVOManagerCaseTests.xctest */,
+				5EF4DCC11E9B757500E846E6 /* YFKVOManagerCaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EF4DCA41E9B757500E846E6 /* YFKVOManagerCase */ = {
+			isa = PBXGroup;
+			children = (
+				5EF4DCD61E9B8CFD00E846E6 /* YFKVOManager.swift */,
+				5EF4DCA51E9B757500E846E6 /* AppDelegate.swift */,
+				5EF4DCA71E9B757500E846E6 /* ViewController.swift */,
+				5EF4DCA91E9B757500E846E6 /* Main.storyboard */,
+				5EF4DCAC1E9B757500E846E6 /* Assets.xcassets */,
+				5EF4DCAE1E9B757500E846E6 /* LaunchScreen.storyboard */,
+				5EF4DCB11E9B757500E846E6 /* Info.plist */,
+			);
+			path = YFKVOManagerCase;
+			sourceTree = "<group>";
+		};
+		5EF4DCB91E9B757500E846E6 /* YFKVOManagerCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EF4DCBA1E9B757500E846E6 /* YFKVOManagerCaseTests.swift */,
+				5EF4DCBC1E9B757500E846E6 /* Info.plist */,
+			);
+			path = YFKVOManagerCaseTests;
+			sourceTree = "<group>";
+		};
+		5EF4DCC41E9B757500E846E6 /* YFKVOManagerCaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5EF4DCC51E9B757500E846E6 /* YFKVOManagerCaseUITests.swift */,
+				5EF4DCC71E9B757500E846E6 /* Info.plist */,
+			);
+			path = YFKVOManagerCaseUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EF4DCA11E9B757500E846E6 /* YFKVOManagerCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF4DCCA1E9B757500E846E6 /* Build configuration list for PBXNativeTarget "YFKVOManagerCase" */;
+			buildPhases = (
+				5EF4DC9E1E9B757500E846E6 /* Sources */,
+				5EF4DC9F1E9B757500E846E6 /* Frameworks */,
+				5EF4DCA01E9B757500E846E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YFKVOManagerCase;
+			productName = YFKVOManagerCase;
+			productReference = 5EF4DCA21E9B757500E846E6 /* YFKVOManagerCase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EF4DCB51E9B757500E846E6 /* YFKVOManagerCaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF4DCCD1E9B757500E846E6 /* Build configuration list for PBXNativeTarget "YFKVOManagerCaseTests" */;
+			buildPhases = (
+				5EF4DCB21E9B757500E846E6 /* Sources */,
+				5EF4DCB31E9B757500E846E6 /* Frameworks */,
+				5EF4DCB41E9B757500E846E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EF4DCB81E9B757500E846E6 /* PBXTargetDependency */,
+			);
+			name = YFKVOManagerCaseTests;
+			productName = YFKVOManagerCaseTests;
+			productReference = 5EF4DCB61E9B757500E846E6 /* YFKVOManagerCaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5EF4DCC01E9B757500E846E6 /* YFKVOManagerCaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF4DCD01E9B757500E846E6 /* Build configuration list for PBXNativeTarget "YFKVOManagerCaseUITests" */;
+			buildPhases = (
+				5EF4DCBD1E9B757500E846E6 /* Sources */,
+				5EF4DCBE1E9B757500E846E6 /* Frameworks */,
+				5EF4DCBF1E9B757500E846E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EF4DCC31E9B757500E846E6 /* PBXTargetDependency */,
+			);
+			name = YFKVOManagerCaseUITests;
+			productName = YFKVOManagerCaseUITests;
+			productReference = 5EF4DCC11E9B757500E846E6 /* YFKVOManagerCaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EF4DC9A1E9B757500E846E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = YF;
+				TargetAttributes = {
+					5EF4DCA11E9B757500E846E6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					5EF4DCB51E9B757500E846E6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5EF4DCA11E9B757500E846E6;
+					};
+					5EF4DCC01E9B757500E846E6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5EF4DCA11E9B757500E846E6;
+					};
+				};
+			};
+			buildConfigurationList = 5EF4DC9D1E9B757500E846E6 /* Build configuration list for PBXProject "YFKVOManagerCase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EF4DC991E9B757500E846E6;
+			productRefGroup = 5EF4DCA31E9B757500E846E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EF4DCA11E9B757500E846E6 /* YFKVOManagerCase */,
+				5EF4DCB51E9B757500E846E6 /* YFKVOManagerCaseTests */,
+				5EF4DCC01E9B757500E846E6 /* YFKVOManagerCaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EF4DCA01E9B757500E846E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF4DCB01E9B757500E846E6 /* LaunchScreen.storyboard in Resources */,
+				5EF4DCAD1E9B757500E846E6 /* Assets.xcassets in Resources */,
+				5EF4DCAB1E9B757500E846E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF4DCB41E9B757500E846E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF4DCBF1E9B757500E846E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EF4DC9E1E9B757500E846E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF4DCA81E9B757500E846E6 /* ViewController.swift in Sources */,
+				5EF4DCA61E9B757500E846E6 /* AppDelegate.swift in Sources */,
+				5EF4DCD71E9B8CFD00E846E6 /* YFKVOManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF4DCB21E9B757500E846E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF4DCBB1E9B757500E846E6 /* YFKVOManagerCaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF4DCBD1E9B757500E846E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF4DCC61E9B757500E846E6 /* YFKVOManagerCaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EF4DCB81E9B757500E846E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EF4DCA11E9B757500E846E6 /* YFKVOManagerCase */;
+			targetProxy = 5EF4DCB71E9B757500E846E6 /* PBXContainerItemProxy */;
+		};
+		5EF4DCC31E9B757500E846E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EF4DCA11E9B757500E846E6 /* YFKVOManagerCase */;
+			targetProxy = 5EF4DCC21E9B757500E846E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5EF4DCA91E9B757500E846E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EF4DCAA1E9B757500E846E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EF4DCAE1E9B757500E846E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EF4DCAF1E9B757500E846E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EF4DCC81E9B757500E846E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EF4DCC91E9B757500E846E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EF4DCCB1E9B757500E846E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YFKVOManagerCase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyf.YFKVOManagerCase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5EF4DCCC1E9B757500E846E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YFKVOManagerCase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyf.YFKVOManagerCase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5EF4DCCE1E9B757500E846E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YFKVOManagerCaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyf.YFKVOManagerCaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YFKVOManagerCase.app/YFKVOManagerCase";
+			};
+			name = Debug;
+		};
+		5EF4DCCF1E9B757500E846E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YFKVOManagerCaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyf.YFKVOManagerCaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YFKVOManagerCase.app/YFKVOManagerCase";
+			};
+			name = Release;
+		};
+		5EF4DCD11E9B757500E846E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = YFKVOManagerCaseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyf.YFKVOManagerCaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YFKVOManagerCase;
+			};
+			name = Debug;
+		};
+		5EF4DCD21E9B757500E846E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = YFKVOManagerCaseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyf.YFKVOManagerCaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YFKVOManagerCase;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EF4DC9D1E9B757500E846E6 /* Build configuration list for PBXProject "YFKVOManagerCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF4DCC81E9B757500E846E6 /* Debug */,
+				5EF4DCC91E9B757500E846E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF4DCCA1E9B757500E846E6 /* Build configuration list for PBXNativeTarget "YFKVOManagerCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF4DCCB1E9B757500E846E6 /* Debug */,
+				5EF4DCCC1E9B757500E846E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF4DCCD1E9B757500E846E6 /* Build configuration list for PBXNativeTarget "YFKVOManagerCaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF4DCCE1E9B757500E846E6 /* Debug */,
+				5EF4DCCF1E9B757500E846E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF4DCD01E9B757500E846E6 /* Build configuration list for PBXNativeTarget "YFKVOManagerCaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF4DCD11E9B757500E846E6 /* Debug */,
+				5EF4DCD21E9B757500E846E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EF4DC9A1E9B757500E846E6 /* Project object */;
+}
