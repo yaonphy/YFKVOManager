@@ -9,6 +9,9 @@
 import Foundation
 
 
+
+
+
 class YFKVOManager: NSObject {
     
     var own: Bool?
@@ -33,6 +36,17 @@ class YFKVOManager: NSObject {
         pthread_mutex_destroy(&lock!)
     }
     
+    func observe(object: NSObject, infoObject: NSObject) -> Void {
+        
+        pthread_mutex_lock(&lock!)
+        
+        
+        
+        
+        
+    }
+    
+    
     
 }
 
@@ -40,12 +54,12 @@ class YFKVOManager: NSObject {
 class YFKVOInfo: NSObject{
 
     weak var manager: YFKVOManager?
-    var keyPath: NSString?
+    var keyPath: String?
     var options: NSKeyValueObservingOptions?
     var action: Selector?
     var context: UnsafeMutableRawPointer?
     
-    convenience init(manager: YFKVOManager?, keyPath: NSString?, options: NSKeyValueObservingOptions?, action: Selector!, context: UnsafeMutableRawPointer?) {
+    convenience init(manager: YFKVOManager?, keyPath: String?, options: NSKeyValueObservingOptions?, action: Selector!, context: UnsafeMutableRawPointer?) {
         self.init()
         
         self.manager = manager;
@@ -53,6 +67,7 @@ class YFKVOInfo: NSObject{
         self.action = action;
         self.options = options;
         self.context = context;
+        
     }
     
     func keyPathHash() -> Int? {
@@ -62,6 +77,50 @@ class YFKVOInfo: NSObject{
     
     
 }
+
+class YFKVORouter: NSObject {
+    
+    var kvoInfos: NSHashTable<YFKVOInfo>?
+    var rMutex: pthread_mutex_t?
+
+    class var sharedInstance: YFKVOManager{
+        struct Singleton{
+            static let instance = YFKVOManager()
+        }
+        return Singleton.instance
+    }
+    
+    override init() {
+        self.kvoInfos = NSHashTable.init(options: NSPointerFunctions.Options.init(rawValue: (NSPointerFunctions.Options.weakMemory.rawValue | NSPointerFunctions.Options.objectPersonality.rawValue)), capacity: 0)
+        pthread_mutex_init(&rMutex!,nil)
+        super.init()
+    }
+    
+    func observe(object: NSObject?, kvoInfo: YFKVOInfo!) -> Void {
+        
+        pthread_mutex_lock(&rMutex!)
+        self.kvoInfos?.add(kvoInfo)
+        pthread_mutex_unlock(&rMutex!)
+        
+        object?.addObserver(self, forKeyPath: kvoInfo.keyPath!, options: kvoInfo.options!, context: kvoInfo.context)
+        
+        
+    }
+    
+    deinit {
+        pthread_mutex_destroy(&rMutex!)
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
 
 
 extension NSObject{
