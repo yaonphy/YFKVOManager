@@ -8,7 +8,10 @@
 
 import Foundation
 
-
+enum YFKVOInfoState: Int {
+    case YFKVOInfoStateInitial = 0,YFKVOInfoStateObserving,YFKVOInfoStateUnObserving
+    
+}
 
 
 
@@ -41,9 +44,6 @@ class YFKVOManager: NSObject {
         pthread_mutex_lock(&lock!)
         
         
-        
-        
-        
     }
     
     
@@ -58,6 +58,7 @@ class YFKVOInfo: NSObject{
     var options: NSKeyValueObservingOptions?
     var action: Selector?
     var context: UnsafeMutableRawPointer?
+    var state: YFKVOInfoState?
     
     convenience init(manager: YFKVOManager?, keyPath: String?, options: NSKeyValueObservingOptions?, action: Selector!, context: UnsafeMutableRawPointer?) {
         self.init()
@@ -102,7 +103,41 @@ class YFKVORouter: NSObject {
         self.kvoInfos?.add(kvoInfo)
         pthread_mutex_unlock(&rMutex!)
         
-        object?.addObserver(self, forKeyPath: kvoInfo.keyPath!, options: kvoInfo.options!, context: kvoInfo.context)
+        if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateInitial{
+            object?.addObserver(self, forKeyPath: kvoInfo.keyPath!, options: kvoInfo.options!, context: kvoInfo.context)
+
+        }else if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateUnObserving{
+            object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: kvoInfo.context)
+        }
+        
+        
+    }
+    func unObserve(object: NSObject?, kvoInfo: YFKVOInfo!) -> Void {
+        
+        pthread_mutex_lock(&rMutex!)
+        self.kvoInfos?.remove(kvoInfo)
+        pthread_mutex_unlock(&rMutex!)
+        
+        if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateObserving{
+            object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: kvoInfo.context)
+        }
+        
+        kvoInfo.state = YFKVOInfoState.YFKVOInfoStateUnObserving
+    }
+    func unObserve(object: NSObject?, kvoInfos: Set<YFKVOInfo>) -> Void {
+        
+        pthread_mutex_lock(&rMutex!)
+        for kvoInfo in kvoInfos {
+            if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateObserving {
+                object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: kvoInfo.context)
+            }
+            kvoInfo.state = YFKVOInfoState.YFKVOInfoStateUnObserving
+        }
+        pthread_mutex_unlock(&rMutex!)
+        
+    }
+    
+    func observe(keyPath: String, object:NSObject, change:Dictionary<NSKeyValueChangeKey, Any>,context: UnsafeMutableRawPointer?) -> Void {
         
         
     }
@@ -113,10 +148,6 @@ class YFKVORouter: NSObject {
     
     
 }
-
-
-
-
 
 
 
