@@ -81,7 +81,7 @@ class YFKVOInfo: NSObject{
 
 class YFKVORouter: NSObject {
     
-    var kvoInfos: NSHashTable<YFKVOInfo>?
+    var kvoInfos: NSHashTable<AnyObject>?
     var rMutex: pthread_mutex_t?
 
     class var sharedInstance: YFKVOManager{
@@ -104,10 +104,12 @@ class YFKVORouter: NSObject {
         pthread_mutex_unlock(&rMutex!)
         
         if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateInitial{
-            object?.addObserver(self, forKeyPath: kvoInfo.keyPath!, options: kvoInfo.options!, context: kvoInfo.context)
+            var theInfo = kvoInfo
+            object?.addObserver(self, forKeyPath: kvoInfo.keyPath!, options: kvoInfo.options!, context: &theInfo)
 
         }else if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateUnObserving{
-            object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: kvoInfo.context)
+            var theInfo = kvoInfo
+            object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: &theInfo)
         }
         
         
@@ -119,7 +121,8 @@ class YFKVORouter: NSObject {
         pthread_mutex_unlock(&rMutex!)
         
         if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateObserving{
-            object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: kvoInfo.context)
+            var theInfo = kvoInfo
+            object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: &theInfo)
         }
         
         kvoInfo.state = YFKVOInfoState.YFKVOInfoStateUnObserving
@@ -129,7 +132,8 @@ class YFKVORouter: NSObject {
         pthread_mutex_lock(&rMutex!)
         for kvoInfo in kvoInfos {
             if kvoInfo.state == YFKVOInfoState.YFKVOInfoStateObserving {
-                object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: kvoInfo.context)
+                var theInfo = kvoInfo
+                object?.removeObserver(self, forKeyPath: kvoInfo.keyPath!, context: &theInfo)
             }
             kvoInfo.state = YFKVOInfoState.YFKVOInfoStateUnObserving
         }
@@ -137,9 +141,29 @@ class YFKVORouter: NSObject {
         
     }
     
-    func observe(keyPath: String, object:NSObject, change:Dictionary<NSKeyValueChangeKey, Any>,context: UnsafeMutableRawPointer?) -> Void {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        var info: YFKVOInfo?
+        pthread_mutex_lock(&rMutex!)
+        info =  self.kvoInfos?.member(context?.load(as: YFKVOInfo.self)) as! YFKVOInfo?
+        pthread_mutex_unlock(&rMutex!)
         
+        if let curInfo = info {
+            
+            if let theManager = curInfo.manager {
+                
+                if let observer = theManager.kvoObserver {
+                    
+                    if let theSelector = curInfo.action{
+                        <#statements#>
+                    }
+                }
+                
+            }
+            
         
+            
+        }
+
     }
     
     deinit {
