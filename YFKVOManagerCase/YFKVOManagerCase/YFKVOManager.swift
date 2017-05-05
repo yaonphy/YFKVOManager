@@ -114,7 +114,7 @@ class YFKVOItem: NSObject{
 class YFSharedObserver: NSObject{
     
     var observedObjects: NSMapTable<NSObject,NSMutableSet>?
-    var rMutex: pthread_mutex_t?
+//    var rMutex: pthread_mutex_t?
     
     class var sharedInstance: YFSharedObserver{
         struct Singleton{
@@ -125,8 +125,8 @@ class YFSharedObserver: NSObject{
     
     override init() {
         
-        self.observedObjects = NSMapTable.init(keyOptions:[.weakMemory], valueOptions: [.strongMemory])
-        pthread_mutex_init(&rMutex!,nil)
+        self.observedObjects = NSMapTable.init(keyOptions:[.strongMemory], valueOptions: [.strongMemory])
+//        pthread_mutex_init(&rMutex!,nil)
     }
     
     func observe(observedObj: NSObject!, for keyPath:String!, with options:NSKeyValueObservingOptions!, and callBack:YFKVOCallBackClosure!) -> Bool {
@@ -169,6 +169,10 @@ class YFSharedObserver: NSObject{
                     if itrItem.keyPath == keyPath {
                         existedSet.remove(itrItem)
                         observedObj.removeObserver(self, forKeyPath: keyPath)
+                        if existedSet.count == 0{
+                            self.observedObjects?.removeObject(forKey: observedObj)
+                        }
+                        
                         return true
                     }
                     
@@ -179,8 +183,6 @@ class YFSharedObserver: NSObject{
         return false
     }
     
-
-
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         if let existedSet = self.observedObjects?.object(forKey: object as! NSObject?){
@@ -190,6 +192,7 @@ class YFSharedObserver: NSObject{
                 if let itrItem = existedKVOItem as? YFKVOItem {
                     
                     if itrItem.keyPath == keyPath {
+                        
                         itrItem.callBack(object,change)
                     }
                     
@@ -199,8 +202,9 @@ class YFSharedObserver: NSObject{
         }
     }
     
+    
     deinit {
-        pthread_mutex_destroy(&rMutex!)
+//        pthread_mutex_destroy(&rMutex!)
     }
     
     
